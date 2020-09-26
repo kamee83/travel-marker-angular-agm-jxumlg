@@ -1,0 +1,19 @@
+<h1>Travel Marker Angular Google Maps (AGM) Demo</h1>
+<p><a href="https://github.com/ManpreetSingh80/travel-marker" target="_blank">Github</a></p>
+
+<agm-map 
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom" (mapReady)="onMapReady($event)">
+</agm-map>
+
+  <div class="controls">
+    <button (click)="play()">Play</button>
+    <button (click)="pause()">Pause</button>
+    <button (click)="reset()">Reset</button>
+    <button (click)="next()">Next</button>
+    <button (click)="prev()">Previous</button>
+    <button (click)="fast()">Fast</button>
+    <span id="speed">Speed: {{ speedMultiplier }}x</span>
+    <button (click)="slow()">Slow</button>
+  </div>

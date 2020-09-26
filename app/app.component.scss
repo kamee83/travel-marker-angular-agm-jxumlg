@@ -1,0 +1,49 @@
+agm-map {
+  height: 500px;
+}
+
+
+* {
+  font-family: Lato;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: darkblue;
+}
+
+.controls {
+  position: absolute;
+  z-index: 999;
+  top: 120px;
+  right: 20px;
+}
+
+button {
+  font-size: 14px;
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button:hover, button:focus {
+  background: red;
+}
+
+.active {
+  background: red;
+}
+
+.hidden {
+  display: none;
+}
+
+span {
+  color: red;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
