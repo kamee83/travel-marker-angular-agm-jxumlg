@@ -27,7 +27,7 @@ export class AppComponent  {
   speedMultiplier = 1;
 
   onMapReady(map: any) {
-    console.log(map);
+    // console.log(map);
     this.map = map;
     this.calcRoute();
     this.mockDirections();
@@ -60,7 +60,7 @@ export class AppComponent  {
     this.directionsService = new google.maps.DirectionsService();
     this.directionsService.route(request, (response, status) => {
       // Empty response as API KEY EXPIRED
-      console.log(response);
+      // console.log(response);
       if (status == google.maps.DirectionsStatus.OK) {
         var legs = response.routes[0].legs;
         for (let i=0;i<legs.length; i++) {
@@ -185,7 +185,7 @@ export class AppComponent  {
   initEvents() {
     this.marker.event.onEvent((event: EventType, data: TravelData) => {
       // console.log(event, data);
-      console.log(data)
+      // console.log(data)
       if(event === "paused"){
         this.last_index = data.index
         // console.log(this.marker.path[data.index])
