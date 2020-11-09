@@ -110,7 +110,7 @@ export class AppComponent  {
     // options
     const options: TravelMarkerOptions = {
       map: this.map,  // map object
-      speed: 10,  // default 10 , animation speed
+      speed: 100,  // default 10 , animation speed
       interval: 10, // default 10, marker refresh time
       speedMultiplier: this.speedMultiplier,
       markerOptions: { 
@@ -176,8 +176,8 @@ export class AppComponent  {
     this.marker.pause();
     const locationArray = this.add_loc.map(l => new google.maps.LatLng(l[0], l[1]));
     this.marker.addLocation(locationArray)
-    // this.marker.play();
-    setTimeout(() => this.marker.play(), 1000);
+    this.marker.play();
+    // setTimeout(() => this.marker.play(), 1000);
     // this.speedMultiplier/=2;
     // this.marker.setSpeedMultiplier(this.speedMultiplier)
   }
