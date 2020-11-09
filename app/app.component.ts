@@ -138,8 +138,7 @@ export class AppComponent  {
       
     setTimeout(() => this.play(), 2000);
   }
-  add_loc = [[37.50254,127.02522]
-,[37.49846,127.02729],[37.49842,127.02732],[37.49840,127.02733],[37.49839,127.02734],[37.49839,127.02735],[37.49838,127.02735],[37.49838,127.02736],[37.49837,127.02736],[37.49837,127.02737],[37.49836,127.02737],[37.49836,127.02738],[37.49836,127.02737],[37.49835,127.02737],[37.49834,127.02737]];
+  add_loc = [[37.50254,127.02522],[37.49846,127.02729],[37.49842,127.02732],[37.49840,127.02733],[37.49839,127.02734],[37.49839,127.02735],[37.49838,127.02735],[37.49838,127.02736],[37.49837,127.02736],[37.49837,127.02737],[37.49836,127.02737],[37.49836,127.02738],[37.49836,127.02737],[37.49835,127.02737],[37.49834,127.02737]];
   // play animation
   play() {
     this.marker.play();
@@ -176,6 +175,11 @@ export class AppComponent  {
     this.marker.pause();
     const locationArray = this.add_loc.map(l => new google.maps.LatLng(l[0], l[1]));
     this.marker.addLocation(locationArray)
+    // for(var i=0;i<locationArray.length;i++){
+    //     let dd = this.add_loc[i];
+    //     console.log(locationArray[i])
+    //     this.marker.addLocation(locationArray[i]);
+    // }
     this.marker.play();
     // setTimeout(() => this.marker.play(), 1000);
     // this.speedMultiplier/=2;
